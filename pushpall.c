@@ -15,15 +15,15 @@ void f_push(stack_t **head, unsigned int counter)
 			index++;
 		for (; bus.arg[index] != '\0'; index++)
 		{
-			if (bus.arg[index] > 57 || bus.arg[index] < 48)
+			if (bus.arg[index] > '9' || bus.arg[index] < '0')
 				flag = 1;
-			if (flag == 1)
-				fprintf(stderr, "L%d: usage: push integer\n", counter);
-				fclose(bus.file);
-				free(bus.content);
-				free_stack(*head);
-				exit(EXIT_FAILURE);
 		}
+		if (flag == 1)
+			fprintf(stderr, "L%d: usage: push integer\n", counter);
+			fclose(bus.file);
+			free(bus.content);
+			free_stack(*head);
+			exit(EXIT_FAILURE);
 	}
 	else
 	{
