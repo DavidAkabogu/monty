@@ -1,4 +1,5 @@
 #include "monty.h"
+
 bus_t bus = {0, NULL, NULL, NULL};
 
 /**
