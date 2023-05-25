@@ -4,26 +4,28 @@
  * f_push - add node to the stack
  * @head: stack head
  * @counter: line_number
-*/
+ */
 void f_push(stack_t **head, unsigned int counter)
 {
-	int n, index = 0, flag = 0;
+	int n, j = 0, flag = 0;
 
 	if (bus.arg)
 	{
 		if (bus.arg[0] == '-')
-			index++;
-		for (; bus.arg[index] != '\0'; index++)
+			j++;
+		for (; bus.arg[j] != '\0'; j++)
 		{
-			if (bus.arg[index] > 57 || bus.arg[index] < 48)
+			if (bus.arg[j] > 57 || bus.arg[j] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
+		{
 			fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(bus.file);
 			free(bus.content);
 			free_stack(*head);
 			exit(EXIT_FAILURE);
+		}
 	}
 	else
 	{
@@ -44,12 +46,13 @@ void f_push(stack_t **head, unsigned int counter)
  * f_pall - prints the stack
  * @head: stack head
  * @counter: no used
-*/
+ */
 void f_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *h = *head;
+	stack_t *h;
 	(void)counter;
 
+	h = *head;
 	if (h == NULL)
 		return;
 	while (h)
