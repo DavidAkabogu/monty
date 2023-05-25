@@ -1,12 +1,11 @@
 #include "monty.h"
 
 /**
- * f_add - adds the top two elements of the stack.
- * @head: stack head
+ * add_copy - this opcode adds the top two elements of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_add(stack_t **head, unsigned int counter)
+ */
+void add_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -33,12 +32,12 @@ void f_add(stack_t **head, unsigned int counter)
 }
 
 /**
-  *f_sub- sustration
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+ * sub_copy - this opcode subtracts the top element of the stack
+ *		from the second top element of the stack.
+ * @head: pointer to a pointer to the head node of the stack
+ * @counter: line_number
  */
-void f_sub(stack_t **head, unsigned int counter)
+void sub_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;
 	int sus, nodes;
@@ -62,12 +61,12 @@ void f_sub(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_div - divides the top two elements of the stack.
- * @head: stack head
+ * div_copy - this opcode divides the second top element of the stack
+ *		by the top element of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_div(stack_t **head, unsigned int counter)
+ */
+void div_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -102,12 +101,12 @@ void f_div(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_mul - multiplies the top two elements of the stack.
- * @head: stack head
+ * mul_copy - this opcode multiplies the second top element of the stack
+ *		with the top element of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_mul(stack_t **head, unsigned int counter)
+ */
+void mul_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -134,13 +133,12 @@ void f_mul(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_mod - computes the rest of the division of the second
- * top element of the stack by the top element of the stack
- * @head: stack head
+ * mod_copy - this opcode computes the rest of the division of the
+ *		second top element of the stack by the top element of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_mod(stack_t **head, unsigned int counter)
+ */
+void mod_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;

@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * f_pint - prints the top
- * @head: stack head
+ * pint_copy - this opcode prints the value at the top of the stack,
+ *		followed by a new line.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_pint(stack_t **head, unsigned int counter)
+ */
+void pint_copy(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
 	{
@@ -20,12 +20,11 @@ void f_pint(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_pop - prints the top
- * @head: stack head
+ * pop_copy - this opcode removes the top element of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_pop(stack_t **head, unsigned int counter)
+ */
+void pop_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 
@@ -43,12 +42,11 @@ void f_pop(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_swap - adds the top two elements of the stack.
- * @head: stack head
+ * swap_copy - this opcode swaps the top two elements of the stack.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_swap(stack_t **head, unsigned int counter)
+ */
+void swap_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;
@@ -74,12 +72,11 @@ void f_swap(stack_t **head, unsigned int counter)
 }
 
 /**
-  *f_nop- nothing
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+ * nop_copy - this opcode doesn’t do anything.
+ * @head: pointer to a pointer to the head node of the stack
+ * @counter: line_number
  */
-void f_nop(stack_t **head, unsigned int counter)
+void nop_copy(stack_t **head, unsigned int counter)
 {
 	(void) counter;
 	(void) head;

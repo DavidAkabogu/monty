@@ -1,12 +1,11 @@
 #include "monty.h"
 
 /**
-  *f_rotl- rotates the stack to the top
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+ * rotl_copy - this opcode rotates the stack to the top.
+ * @head: pointer to a pointer to the head node of the stack
+ * @counter: attribute unused
  */
-void f_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
+void rotl_copy(stack_t **head,  __attribute__((unused)) unsigned int counter)
 {
 	stack_t *tmp = *head, *aux;
 
@@ -27,12 +26,11 @@ void f_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
 }
 
 /**
-  *f_rotr- rotates the stack to the bottom
-  *@head: stack head
-  *@counter: line_number
-  *Return: no return
+ * rotr_copy - this opcode rotates the stack to the bottom.
+ * @head: pointer to a pointer to the head node of the stack
+ * @counter: attribute unused
  */
-void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
+void rotr_copy(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
 	stack_t *copy;
 

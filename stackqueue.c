@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * f_stack - prints the top
- * @head: stack head
+ * stack_copy - this opcode sets the format of the data to a stack (LIFO).
+ *		This is the default behavior of the program.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_stack(stack_t **head, unsigned int counter)
+ */
+void stack_copy(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
@@ -14,12 +14,11 @@ void f_stack(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_queue - prints the top
- * @head: stack head
+ * queue_copy - this opcode sets the format of the data to a queue (FIFO).
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_queue(stack_t **head, unsigned int counter)
+ */
+void queue_copy(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

@@ -4,8 +4,8 @@ bus_t bus = {0, NULL, NULL, NULL};
 
 /**
 * main - monty code interpreter
-* @argc: number of arguments
-* @argv: monty file location
+* @argc: argument count
+* @argv: argument vector
 * Return: 0 on success
 */
 int main(int argc, char *argv[])
@@ -43,5 +43,5 @@ int main(int argc, char *argv[])
 	}
 	free_stack(stack);
 	fclose(file);
-return (0);
+	return (0);
 }

@@ -2,7 +2,7 @@
 
 /**
 * free_stack - frees a doubly linked list
-* @head: head of the stack
+* @head: pointer to the head node of the stack
 */
 void free_stack(stack_t *head)
 {
@@ -18,11 +18,10 @@ void free_stack(stack_t *head)
 }
 
 /**
- * addnode - add node to the head stack
- * @head: head of the stack
+ * addnode - this function adds a node to the top of the stack
+ * @head: pointer to a pointer to the head node of the stack
  * @n: new_value
- * Return: no return
-*/
+ */
 void addnode(stack_t **head, int n)
 {
 
@@ -42,11 +41,10 @@ void addnode(stack_t **head, int n)
 }
 
 /**
- * addqueue - add node to the tail stack
+ * addqueue - this function adds a node to the bottom of the stack
+ * @head: pointer to a pointer to the head node of the stack
  * @n: new_value
- * @head: head of the stack
- * Return: no return
-*/
+ */
 void addqueue(stack_t **head, int n)
 {
 	stack_t *new_node, *aux;

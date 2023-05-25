@@ -1,21 +1,21 @@
 #include "monty.h"
 
 /**
- * f_push - add node to the stack
- * @head: stack head
+ * push_copy - this opcode pushes an element to the stack
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
  */
-void f_push(stack_t **head, unsigned int counter)
+void push_copy(stack_t **head, unsigned int counter)
 {
-	int n, j = 0, flag = 0;
+	int n, index = 0, flag = 0;
 
 	if (bus.arg)
 	{
 		if (bus.arg[0] == '-')
-			j++;
-		for (; bus.arg[j] != '\0'; j++)
+			index++;
+		for (; bus.arg[index] != '\0'; index++)
 		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			if (bus.arg[index] > 57 || bus.arg[index] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
@@ -43,11 +43,12 @@ void f_push(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_pall - prints the stack
- * @head: stack head
- * @counter: no used
+ * pall_copy - this opcode prints all the values on the stack,
+ *		starting from the top of the stack.
+ * @head: pointer to a pointer to the head node of the stack
+ * @counter: attribute unused
  */
-void f_pall(stack_t **head, unsigned int counter)
+void pall_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	(void)counter;

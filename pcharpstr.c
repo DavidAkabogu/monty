@@ -1,13 +1,12 @@
 #include "monty.h"
 
 /**
- * f_pchar - prints the char at the top of the stack,
- * followed by a new line
- * @head: stack head
+ * pchar_copy - this opcode prints the char at the top of the stack,
+ *		followed by a new line.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_pchar(stack_t **head, unsigned int counter)
+ */
+void pchar_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 
@@ -32,13 +31,12 @@ void f_pchar(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_pstr - prints the string starting at the top of the stack,
- * followed by a new
- * @head: stack head
+ * pstr_copy - this opcode prints the string starting at the top of the stack,
+ *		followed by a new line.
+ * @head: pointer to a pointer to the head node of the stack
  * @counter: line_number
- * Return: no return
-*/
-void f_pstr(stack_t **head, unsigned int counter)
+ */
+void pstr_copy(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	(void)counter;
