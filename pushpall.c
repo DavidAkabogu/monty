@@ -7,7 +7,7 @@
 */
 void f_push(stack_t **head, unsigned int counter)
 {
-	int number, index = 0, flag = 0;
+	int n, index = 0;
 
 	if (bus.arg)
 	{
@@ -15,15 +15,13 @@ void f_push(stack_t **head, unsigned int counter)
 			index++;
 		for (; bus.arg[index] != '\0'; index++)
 		{
-			if (bus.arg[index] > '9' || bus.arg[index] < '0')
-				flag = 1;
+			if (bus.arg[index] > 57 || bus.arg[index] < 48)
+				fprintf(stderr, "L%d: usage: push integer\n", counter);
+				fclose(bus.file);
+				free(bus.content);
+				free_stack(*head);
+				exit(EXIT_FAILURE);
 		}
-		if (flag == 1)
-			fprintf(stderr, "L%d: usage: push integer\n", counter);
-			fclose(bus.file);
-			free(bus.content);
-			free_stack(*head);
-			exit(EXIT_FAILURE);
 	}
 	else
 	{
@@ -33,11 +31,11 @@ void f_push(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	number = atoi(bus.arg);
+	n = atoi(bus.arg);
 	if (bus.lifi == 0)
-		addnode(head, number);
+		addnode(head, n);
 	else
-		addqueue(head, number);
+		addqueue(head, n);
 }
 
 /**
