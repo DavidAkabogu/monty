@@ -1,8 +1,10 @@
 #include "monty.h"
 
 /**
-* free_stack - frees a doubly linked list
-* @head: pointer to the head node of the stack
+* free_stack - This function frees a doubly linked list
+* @head: Pointer to the head node of the stack
+*
+* Return: Void
 */
 void free_stack(stack_t *head)
 {
@@ -18,9 +20,11 @@ void free_stack(stack_t *head)
 }
 
 /**
- * addnode - this function adds a node to the top of the stack
- * @head: pointer to a pointer to the head node of the stack
- * @n: new_value
+ * addnode - This function adds a node to the top of the stack
+ * @head: Pointer to pointer to the head node of the stack
+ * @n: New_value
+ *
+ * Return: No return
  */
 void addnode(stack_t **head, int n)
 {
@@ -41,9 +45,11 @@ void addnode(stack_t **head, int n)
 }
 
 /**
- * addqueue - this function adds a node to the bottom of the stack
- * @head: pointer to a pointer to the head node of the stack
- * @n: new_value
+ * addqueue - Function that adds a node to the bottom of the stack
+ * @head: Pointer to pointer to the head node of the stack
+ * @n: New_value
+ *
+ * Return: Nothing
  */
 void addqueue(stack_t **head, int n)
 {

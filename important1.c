@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * execute - executes the opcode
- * @stack: head linked list - stack
- * @counter: line_counter
- * @file: poiner to monty file
- * @content: line content
- * Return: Always 1 (successful)
+ * execute - Function that executes the opcode
+ * @stack: Head linked list - stack
+ * @counter: Line_counter
+ * @file: Pointer to monty file
+ * @content: Line content
+ * Return: 1 on success
  */
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
@@ -28,22 +28,22 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"stack", stack_copy},
 				{NULL, NULL}
 				};
-	unsigned int i = 0;
+	unsigned int j = 0;
 	char *op;
 
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-	while (opst[i].opcode && op)
+	while (opst[j].opcode && op)
 	{
-		if (strcmp(op, opst[i].opcode) == 0)
-		{	opst[i].f(stack, counter);
+		if (strcmp(op, opst[j].opcode) == 0)
+		{	opst[j].f(stack, counter);
 			return (0);
 		}
-		i++;
+		j++;
 	}
-	if (op && opst[i].opcode == NULL)
+	if (op && opst[j].opcode == NULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);

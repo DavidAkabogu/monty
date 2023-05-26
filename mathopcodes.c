@@ -1,9 +1,11 @@
 #include "monty.h"
 
 /**
- * add_copy - this opcode adds the top two elements of the stack.
- * @head: pointer to a pointer to the head node of the stack
- * @counter: line_number
+ * add_copy - This opcode adds the top two elements of the stack.
+ * @head: Pointer to pointer to the head node of the stack
+ * @counter: Line_number
+ *
+ * Return: Void
  */
 void add_copy(stack_t **head, unsigned int counter)
 {
@@ -32,10 +34,12 @@ void add_copy(stack_t **head, unsigned int counter)
 }
 
 /**
- * sub_copy - this opcode subtracts the top element of the stack
+ * sub_copy - This opcode subtracts the top element of the stack
  *		from the second top element of the stack.
- * @head: pointer to a pointer to the head node of the stack
- * @counter: line_number
+ * @head: Pointer to a pointer to the head node of the stack
+ * @counter: Line_number
+ *
+ * Return: Void
  */
 void sub_copy(stack_t **head, unsigned int counter)
 {
@@ -61,10 +65,12 @@ void sub_copy(stack_t **head, unsigned int counter)
 }
 
 /**
- * div_copy - this opcode divides the second top element of the stack
+ * div_copy - This function divides the second top element of the stack
  *		by the top element of the stack.
- * @head: pointer to a pointer to the head node of the stack
+ * @head: Pointer to a pointer to the head node of the stack
  * @counter: line_number
+ *
+ * Return: Void
  */
 void div_copy(stack_t **head, unsigned int counter)
 {
@@ -101,10 +107,12 @@ void div_copy(stack_t **head, unsigned int counter)
 }
 
 /**
- * mul_copy - this opcode multiplies the second top element of the stack
+ * mul_copy - This function multiplies the second top element of the stack
  *		with the top element of the stack.
- * @head: pointer to a pointer to the head node of the stack
- * @counter: line_number
+ * @head: Pointer to a pointer to the head node of the stack
+ * @counter: Line_number
+ *
+ * Return: Void
  */
 void mul_copy(stack_t **head, unsigned int counter)
 {
@@ -133,10 +141,12 @@ void mul_copy(stack_t **head, unsigned int counter)
 }
 
 /**
- * mod_copy - this opcode computes the rest of the division of the
+ * mod_copy - This function computes the rest of the division of the
  *		second top element of the stack by the top element of the stack.
- * @head: pointer to a pointer to the head node of the stack
+ * @head: Pointer to a pointer to the head node of the stack
  * @counter: line_number
+ *
+ * Return: Void
  */
 void mod_copy(stack_t **head, unsigned int counter)
 {
